@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans", sans-serif;
+}
+
+.navbar {
+    background-color: #222121;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 94px;
+}
+
+.header-logo{
+    padding: 25px 50px;
+}
+
+.header-nav{
+    display: flex;
+    flex-basis: 100%; /*Дать элементу заполнить все свободное пространство*/
+    list-style: none;
+    padding: 0 50px;
+    margin: 0;
+}
+
+.header-nav-link{
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 50px; /*Отодвинуть ссылки друг от друга*/
+    color: inherit; /*Взять цвет текста для ссылок у родительского элемента .navbar*/
+}
+
+.header-phone{
+    flex-shrink: 0; /*Не сжимать номер телефона*/
+    display: flex;
+    align-items:center;
+    gap: 10px; /*Отступ*/ 
+    margin-right: 50px;
+}
+
+.header-phone-link{
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+}
+
+.button{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 160%;
+    color: #fff;
+    background: rgb(92, 142, 230);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 25px 60px 25px 60px;
+    gap: 10px;
+    border: none;
+    flex-shrink: 0; /*Не переносить текст  кнопке*/
+}
+
+.header-button{
+    height: 100%;
+}
