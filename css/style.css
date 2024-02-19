@@ -7,7 +7,7 @@ body{
 }
 
 @font-face {
-	font-family: 'Bebas Neue Cyrillic';
+	font-family: 'Bebas';
 	src: url('../fonts/bebas_neue_cyrillic.eot'); /* IE 9 Compatibility Mode */
 	src: url('../fonts/bebas_neue_cyrillic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('../fonts/bebas_neue_cyrillic.woff2') format('woff2'), /* Super Modern Browsers */
@@ -26,9 +26,20 @@ body{
 		url('../fonts/noto_sans.svg#noto_sans') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
+@font-face {
+	font-family: 'Bebas Regular';
+	src: url('../fonts/bebas_neue_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/bebas_neue_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/bebas_neue_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/bebas_neue_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/bebas_neue_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/bebas_neue_regular.svg#bebas_neue_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 .container{
     max-width: 1440px;
     margin: auto;
+    height: 782px; /*PP*/
 }
 
 .header{
@@ -89,7 +100,9 @@ body{
     display: flex;
     flex-basis: 100%; /*Дать элементу заполнить все свободное пространство*/
     list-style: none;
-    padding: 0 50px;
+    /* padding: 0 50px; */
+    padding: 0 52px; /*Pixel Perfect*/
+    letter-spacing: 0.1px;
     margin: 0;
 }
 
@@ -123,7 +136,7 @@ body{
     display: flex;
     align-items:center;
     justify-content: center;
-    padding: 25px 60px 25px 60px;
+    /* padding: 25px 60px 25px 60px; */
     gap: 10px;
     border: none;
     flex-shrink: 0; /*Не переносить текст  кнопке*/
@@ -131,13 +144,23 @@ body{
 }
 
 .header-button{
+    flex-shrink: 0;
     height: 100%;
+    /* padding: 25px 60px 25px 60px; */
+    padding: 24px 38px 21px 50px /*pixel Perfect*/
+    
+}
+
+.header-button-title{
+    padding: 23px 62px 26px 60px;
+    margin: -37px 8px;
 }
 
 .seporator{
     width: 150px;
     height: 2px;
     background: rgb(92, 142, 230);
+    margin: 0 7px;
 }
 
 .header-content{
@@ -148,12 +171,13 @@ body{
 }
 
 .header-title{
-    /* max-width: 1080px; */
-    font-family: 'Bebas Neue Cyrillic';
+    max-width: 1080px;
+    font-family: 'Bebas Regular';
     font-weight: 400;
     font-size: 80px;
     line-height: 120%;
-    margin: 30px 0;
+    /* margin: 30px 0; */
+    margin: 21px 8px /*Pixel perfect*/
 }
 
 .header-text{
@@ -164,23 +188,30 @@ body{
     font-style: normal;
     font-size: 16px;
     line-height: 160%;
-    margin-bottom: 50px;
+    margin-bottom: 69px;
+    padding: 19px 10px;
+    letter-spacing: 0.2px;
+    word-spacing: -1px 
 }
 
 .header-features{
     display: flex;
     min-height: 168px;
+    margin-top: 138px; /*PP*/
     padding: 0;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     list-style: none;
     color:#fff;
     position: relative;
 }
 
 .header-features-item{
-    padding: 30px 50px;
+    /* padding: 30px 53px; */
+    padding: 30px 50px; /*PP*/
     border: 1px solid rgba(235, 235, 240, 0.2);
-    font-family: Noto Sans;
+    font-family: 'Noto Sans';
+    margin-left: 9px;/*PP*/
+    max-width: 279px;/*PP*/
 }
 
 .header-features-item:not(:last-child){
@@ -199,13 +230,12 @@ body{
 }
 
 .section-title{
-    font-family: 'Bebas Neue Cyrillic';
-    font-size: 68px;
+    font-family: 'Bebas Regular';
+    font-size: 60px;
     font-weight: 400;
     line-height: 120%;
     color: rgb(41, 45, 51);
-    /* margin-top: 30px;
-    margin-bottom: 10px; */
+    margin: 23px 10px;
 }
 
 .steps{
@@ -213,6 +243,7 @@ body{
     list-style: none;
     padding: 0;
     gap: 30px;
+    padding: 33px 0px 0px 10px;
 }
 
 .steps-item{
@@ -220,7 +251,7 @@ body{
 }
 
 .steps-num{
-    font-family: 'Bebas Neue Cyrillic';
+    font-family: 'Bebas Regular';
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
@@ -245,6 +276,7 @@ body{
     line-height: 160%;
     margin-top: 30px;
     margin-bottom: 10px;
+
 }
 
 .steps-text{
