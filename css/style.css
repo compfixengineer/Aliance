@@ -210,12 +210,26 @@ body{
     padding: 30px 50px; /*PP*/
     border: 1px solid rgba(235, 235, 240, 0.2);
     font-family: 'Noto Sans';
-    margin-left: 9px;/*PP*/
-    max-width: 279px;/*PP*/
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 289px;/*PP*/
 }
 
 .header-features-item:not(:last-child){
     border-right: none;
+}
+
+.item-time{
+    margin-left: 8px;
+}
+
+.item-control{
+    max-width: 287px;
+}
+
+.item-speed{
+    margin-right: -9px;
 }
 
 .header-features-text{
