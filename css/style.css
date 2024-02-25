@@ -100,6 +100,11 @@ body{
     height: 100%;
 }
 
+.logo-svg{
+    width: 8.75rem; 
+    height: 2.75rem;
+}
+
 .header-nav{
     display: flex;
     flex-basis: 100%; /*Дать элементу заполнить все свободное пространство*/
