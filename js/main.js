@@ -5,7 +5,7 @@ const menu = document.querySelector(".mobile-menu");
 
 const swiper = new Swiper('.features-slider', {
     speed: 400,
-    autoHeight: true,
+    autoHeight: false,
     slidesPerView: 1,
     navigation: {
         nextEl: ".slider-button-next",
@@ -33,7 +33,6 @@ const swiper = new Swiper('.features-slider', {
   
   const swiperSteps = new Swiper('.steps-slider', {
     speed: 400,
-    autoHeight: true,
     slidesPerView: 1,
     navigation: {
         nextEl: ".slider-button-next_steps",

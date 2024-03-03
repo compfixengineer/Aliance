@@ -227,11 +227,15 @@ body{
     position: relative;
 }
 
+.swiper-slide .header-features-item {
+    height: 0;
+}
+
 .header-features-item{
     /* padding: 30px 53px; */
     padding: 1.75rem 3.125rem; /*PP*/
     width: 18rem;
-    min-height: 100%;
+    height: auto;
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
