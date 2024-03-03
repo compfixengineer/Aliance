@@ -3,7 +3,7 @@ const logo = document.querySelector(".logo-svg use");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.features-slider', {
     speed: 400,
     autoHeight: true,
     slidesPerView: 1,
@@ -31,7 +31,7 @@ const swiper = new Swiper('.swiper', {
     }   
   });
   
-  const swiperSteps = new Swiper('.swiper-steps', {
+  const swiperSteps = new Swiper('.steps-slider', {
     speed: 400,
     autoHeight: true,
     slidesPerView: 1,
@@ -50,11 +50,11 @@ const swiper = new Swiper('.swiper', {
           },
           // when window width is >= 1024px
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
           // when window width is >= 1200px
           1200: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             }
       }   
   });  
