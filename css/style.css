@@ -112,6 +112,8 @@ body{
 
 .header-nav{
     display: flex;
+    align-items: center;
+    height: 100%;
     flex-basis: 100%; /*Дать элементу заполнить все свободное пространство*/
     list-style: none;
     /* padding: 0 50px; */
@@ -120,16 +122,42 @@ body{
     letter-spacing: 0.1px;
     margin: 0;
 }
+.header-nav-item {
+    height: 100%;
+    display: flex;
+    align-items: center;  
+}
 
 .header-nav-item:not(:last-child){
     margin-right: 3.125rem;
 }
 
 .header-nav-link{
+    display: flex;
+    height: 100%;
+    align-items: center;
     text-decoration: none;
     font-size: 1rem;
     /* margin-right: 3.125rem; Отодвинуть ссылки друг от друга */
     color: inherit; /*Взять цвет текста для ссылок у родительского элемента .navbar*/
+    /* border-bottom: 2px solid rgba(235, 235, 240, 0); */
+    position: relative;
+}
+
+.header-nav-link::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    background-color: #5C8EE5;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+}
+
+.header-nav-link:hover::after{
+    /* border-bottom: 2px solid #5C8EE5; */
+    transform: scaleX(1);
 }
 
 .header-phone{
@@ -390,10 +418,71 @@ body{
     background: rgb(92, 142, 230);
     width: 2.5rem;
     margin-right: 1.25rem;
+    transition: width 0.2s;
+}
+
+.steps-link:hover::before {
+    width: 60px;
 }
 
 .mobile-menu {
     display: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 56px;
+    margin-left: 8px;
+}
+.card {
+    text-decoration: none;
+    flex-basis: 33%;
+    /* width: 480px; */
+    height: 593px;
+    border: 1px solid #ebebf0;
+    position: relative;
+    transition: border 0.2s;
+}
+
+.card:hover .card-title { /*При наведении на карточку изменить цввет заголовка*/
+    color:#5C8EE6;
+}
+.card:hover {
+    border-color: #5C8EE6;
+}
+
+.card-content {
+    /* padding: 2.5rem 7rem 3.125rem 2.5rem; */
+    padding: 2.5rem 3.125rem;
+    padding-right: .625rem;
+}
+.card-title {
+    font-weight: 400;
+    font-size: 1.75rem;
+    /* line-height: 140%; */
+    color:#292d33;
+    /* margin-top: 0; */
+    margin-right: .625rem;
+    transition: color 0.2s;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 02px;
+    margin-left: 2px;
+}
+.card-text {
+    font-size: 1rem;
+    line-height: 160%;
+    color:#828a99;
+    margin-bottom: 24.625rem;
+    margin-top: -15px;
+}
+.card-image {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
 }
 
 @media (max-width: 1700px) {
@@ -594,6 +683,9 @@ body{
     .steps-item {
         max-width: 47%;
     }
+    .card {
+        flex-basis: 50%;
+    }
 }
 @media (max-width: 768px){
     .container{
@@ -611,6 +703,9 @@ body{
     .slider-buttons-steps {
     margin-top: -15px;
     }
+    .card {
+        flex-basis: 100%;
+    }
 }
 @media (max-width: 576px){
     .container{
@@ -625,4 +720,12 @@ body{
     .slider-buttons-steps {
         margin-top: 20px;
     }
+    .card {
+        flex-basis: 100%;
+        height: 400px;
+    }
+    .card-content {
+        /* padding: 2.5rem 7rem 3.125rem 2.5rem; */
+        padding: 2.5rem 0.5rem;
+      }
 }
