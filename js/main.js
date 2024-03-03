@@ -31,7 +31,34 @@ const swiper = new Swiper('.swiper', {
     }   
   });
   
-
+  const swiperSteps = new Swiper('.swiper-steps', {
+    speed: 400,
+    autoHeight: true,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: ".slider-button-next_steps",
+        prevEl: ".slider-button-prev_steps",
+    },
+      breakpoints: {
+          // when window width is >= 320px
+          576: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+          },
+          // when window width is >= 1200px
+          1200: {
+              slidesPerView: 3,
+            }
+      }   
+  });  
+        
 const lightModeOn = (event) => {
     navbar.classList.add("navbar-light");
     logo.href.baseVal = "img/sprite.svg#logo";

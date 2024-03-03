@@ -222,7 +222,6 @@ body{
     min-height: 10.5rem;
     margin-top: 8.625rem; /*PP*/
     padding: 0;
-    /* margin-top: 100px; */
     list-style: none;
     color:#fff;
     position: relative;
@@ -253,6 +252,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.slider-buttons-steps{
+    display: none;
+    height: 40px;
+    justify-content: flex-end;
+}
+
+.slider-button-prev_steps,
+.slider-button-next_steps {
+    height: 100%;
+    background-color: #5C8EE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
     cursor: pointer;
 }
 
@@ -289,7 +305,7 @@ body{
     font-weight: 400;
     line-height: 120%;
     color: rgb(41, 45, 51);
-    margin: 1.4375rem .625rem;
+    margin: 0.438rem .625rem;
 }
 
 .steps{
@@ -301,7 +317,11 @@ body{
 }
 
 .steps-item{
-   max-width: 20.625rem;
+    /* width: 150px; */
+    max-width: 19.0625rem;
+    margin-right: 1.5rem;
+    margin-top: .2rem;
+    min-height: 100%;
 }
 
 .steps-num{
@@ -328,8 +348,9 @@ body{
     font-size: 1.75rem;
     font-weight: 400;
     line-height: 160%;
-    margin-top: 1.875rem;
-    margin-bottom: .625rem;
+    margin-top: 2.375rem;
+    margin-bottom: .6875rem;
+    padding-left: .125rem;
 
 }
 
@@ -341,6 +362,7 @@ body{
     line-height: 160%;
     margin-top: .625rem;
     margin-bottom: 1.25rem;
+    /* max-width: 18.75rem; */
 }
 
 .steps-link{
@@ -404,6 +426,10 @@ body{
     .slider-buttons{
         display: flex;
     }
+    .slider-buttons-steps{
+        display: flex;
+        /* margin-top: 30px; */
+    }
     .header-image{
         background-position: center;
     }
@@ -419,6 +445,9 @@ body{
     .navbar-button{
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    .steps-item {
+       max-width: 90%;
     }
 }
 @media (max-width: 992px) {
@@ -443,7 +472,6 @@ body{
         height: 100%;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         justify-content: space-between;
         padding: 1.8rem;
         border-right: 1px solid rgba(235, 235, 240, 0.2);
@@ -559,6 +587,12 @@ body{
     .close-menu .mobile-menu-line:nth-child(3){
         transform: rotate(-45deg) translateY(-11px);
     }
+    .steps-item {
+        max-width: 50%;
+    }
+    /* .slider-buttons-steps {
+        margin-top: -70px;
+    } */
 }
 @media (max-width: 768px){
     .container{
@@ -569,6 +603,9 @@ body{
     }
     .header-content{
         padding-top: 3rem;
+    }
+    .steps-item {
+        max-width: 95%;
     }
 }
 @media (max-width: 576px){
