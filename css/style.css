@@ -485,6 +485,66 @@ body{
     z-index: 0;
 }
 
+.cards-lable-product {
+    display: flex;
+    margin-bottom: 6.25rem;
+}
+
+.card-lable-product {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 50%;
+    height: 280px;
+    border: 1px solid #ebebf0;
+    transition: border 0.2s;
+    margin-top: 33px;
+}
+
+.card-content-lable-product {
+    margin-top: -15px;
+    margin-left: 19px;
+}
+
+.card-title-lable-product {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 140%;
+    font-weight: 400;
+    color:#292d33;
+    margin-right: .625rem;
+    transition: color 0.2s;
+}
+
+.card-text-lable-product {
+    font-size: 1rem;
+    line-height: 160%;
+    color:#828a99;
+    padding-right: 100px;
+}
+
+.card-lable-product:hover .card-title-lable-product { /*При наведении на карточку изменить цвет заголовка*/
+    color:#5C8EE6;
+}
+
+.card-image-lable-product {
+    margin-left: 75px;
+}
+
+.img-ag-tech {
+    fill: #828a99;
+}
+.card-lable-product:hover .img-ag-tech {
+    border-color: #5C8EE6;
+    fill: #5C8EE6;
+}
+
+.card-image-lable-product {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 @media (max-width: 1700px) {
     html{
         font-size: 14px;
