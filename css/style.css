@@ -416,7 +416,7 @@ body{
     content: "";
     height: 1px;
     background: rgb(92, 142, 230);
-    width: 2.5rem;
+    width: 3.3rem;
     margin-right: 1.25rem;
     transition: width 0.2s;
 }
@@ -593,7 +593,7 @@ body{
         display: none;
     }
     .navbar{
-        height: 5rem;
+        height: 5.7rem;
     }
     .navbar-button{
         padding-left: 2rem;
@@ -620,20 +620,29 @@ body{
         flex-grow: 1;
         justify-content: center;
     }
+    .logo-svg {
+        max-width: 10rem;
+    }
+    .header-button {
+        padding-left: 2.5rem;
+        padding-right: 2.2rem;
+        padding-top: .625rem;
+        padding-bottom: .625rem;
+    }
     .mobile-menu-toggle{
-        width: 5rem;
+        width: 6.5rem;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.8rem;
+        padding: 2.2rem 2.5rem;
         border-right: 1px solid rgba(235, 235, 240, 0.2);
     }
     .navbar-light .mobile-menu-line{
         background-color: #333;
     }
     .mobile-menu-line{
-        height: 1px;
+        height: 2px;
         background-color:#fff;
         width: 100%;
     }
@@ -766,23 +775,57 @@ body{
     .card {
         flex-basis: 100%;
     }
+    .card-text {
+        font-size: 14px;
+    }
 }
 @media (max-width: 576px){
     .container{
-        max-width: 20rem;
-    }
-    .header-title{
-        font-size: 2rem;
+        max-width: 30rem;
     }
     .header-content{
-        padding-top: 2rem;
+        padding-top: 4rem;
+    }
+    .header-text {
+        padding-top: 0;
+        font-size: 14px;
+        margin-bottom: 3.3rem;
+    }
+    .header-button-title {
+        padding: 1.438rem 3.875rem 1.625rem 3.75rem;
+        margin: -2.3125rem .5rem;
+        width: 96%;
+        font-size: 14px;
+    }
+    .section-white {
+        margin-top: 100px;
+    }
+    .section-title {
+        font-size: 37px;
+        line-height: 120%;
+        color: rgb(41, 45, 51);
+        margin: 15px 10px;
+    }
+    .steps-num {
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 120%;
+        margin-bottom: -19px;
+    }  
+    .steps-text {
+        font-size: 15px;
+        line-height: 140%;
+        margin-bottom: 28px;
+    }
+    .steps-link {
+        font-size: 15px;
     }
     .slider-buttons-steps {
         margin-top: 20px;
     }
     .card {
         flex-basis: 100%;
-        height: 400px;
+        height: 430px;
     }
     .card-content {
         /* padding: 2.5rem 7rem 3.125rem 2.5rem; */
