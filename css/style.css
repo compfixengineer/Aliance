@@ -484,65 +484,55 @@ body{
     right: 0;
     z-index: 0;
 }
-
-.cards-lable-product {
+.trademark-cards {
     display: flex;
-    margin-bottom: 6.25rem;
 }
-
-.card-lable-product {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.trademark-card {
     flex-basis: 50%;
-    height: 280px;
+    text-decoration: none;
     border: 1px solid #ebebf0;
     transition: border 0.2s;
-    margin-top: 33px;
+    padding: 3.125rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 2fr;
+    grid-column-gap: 3.125rem;
+    grid-template-areas: 
+    "logo title title"
+    "logo text text";
 }
-
-.card-content-lable-product {
-    margin-top: -15px;
-    margin-left: 19px;
+.trademark-card-logo {
+    width: 100%;
+    /* height: 11.25rem; */
+    fill:#828a99;
+    grid-area: logo;
 }
-
-.card-title-lable-product {
-    font-weight: 400;
+.trademark-card-title {
     font-size: 1.75rem;
-    line-height: 140%;
+    line-height: 160%;
     font-weight: 400;
+    margin: 0;
     color:#292d33;
-    margin-right: .625rem;
-    transition: color 0.2s;
+    grid-area: title;
 }
-
-.card-text-lable-product {
+.trademark-card-text {
+    font-style: normal;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 160%;
     color:#828a99;
-    padding-right: 100px;
+    grid-area: text;
+    margin-top: .625rem;
 }
-
-.card-lable-product:hover .card-title-lable-product { /*При наведении на карточку изменить цвет заголовка*/
-    color:#5C8EE6;
-}
-
-.card-image-lable-product {
-    margin-left: 75px;
-}
-
-.img-ag-tech {
-    fill: #828a99;
-}
-.card-lable-product:hover .img-ag-tech {
+.trademark-card:hover {
     border-color: #5C8EE6;
-    fill: #5C8EE6;
+    cursor: pointer;
 }
-
-.card-image-lable-product {
-    margin-left: 50px;
-    margin-right: 50px;
+.trademark-card:hover .trademark-card-logo {
+    fill:#5C8EE5;
+}
+.trademark-card:hover .trademark-card-title {
+    color:#5C8EE5;
 }
 
 @media (max-width: 1700px) {
@@ -601,6 +591,9 @@ body{
     }
     .steps-item {
         max-width: 45%;
+    }
+    .trademark-card {
+        grid-template-columns: auto auto;
     }
 } 
 @media (max-width: 992px) {
@@ -755,6 +748,9 @@ body{
     .card {
         flex-basis: 50%;
     }
+    .trademark-cards {
+        flex-direction: column;
+    }
 }
 @media (max-width: 768px){
     .container{
@@ -828,7 +824,29 @@ body{
         height: 430px;
     }
     .card-content {
-        /* padding: 2.5rem 7rem 3.125rem 2.5rem; */
         padding: 2.5rem 0.5rem;
       }
+    .trademark-cards {
+        margin-top: 2.1875rem;
+    }  
+    .trademark-card {
+        grid-template-areas: 
+        "logo title"
+        "text text";
+      }
+    .trademark-card-logo {
+        width: 100px;
+        margin-top: -1.875rem;
+    }
+    .trademark-card-title {
+        margin-top: -5px;
+        margin-left: -47px;
+        line-height: 140%; 
+    }
+    .trademark-card-text {
+        font-size: 14px;
+        line-height: 160%;
+        margin-top: -15px;
+        margin-bottom: -9px;
+    }
 }
