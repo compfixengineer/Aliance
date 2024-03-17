@@ -153,4 +153,16 @@ modalToggle.forEach((element) => {
 modalClose.addEventListener("click", (event) => {
   event.preventDefault();
   modal.classList.remove("is-open");
-} )
+});
+
+modal.addEventListener("click", (element) => {
+  if (element.target === modal) {
+    modal.classList.remove("is-open");
+  }
+});
+
+window.addEventListener("keydown", (element) => {
+  if (element.code === "Escape" && modal.classList.contains("is-open")) {
+    modal.classList.remove("is-open");
+  }
+});
