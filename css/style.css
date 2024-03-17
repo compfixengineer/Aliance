@@ -960,6 +960,13 @@ body{
     .header-phone{
         margin-right: 2rem;
     }
+    .cta-form-wrapper {
+        margin: auto;
+        justify-content: center;
+    }
+    .cta-image {
+        display: none;
+    }
 }
 @media (max-width: 1200px) {
     html{
@@ -1168,6 +1175,50 @@ body{
     .blog-card-text {
         display: none;
     }
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        margin-bottom: 1.875rem;
+    }
+    .footer-phone {
+        margin-bottom: 1.25rem;
+    }
+    .footer-info {
+        margin-bottom: 0.625rem;
+        padding-bottom: 15px;
+    }
+    .footer-social {
+        margin-top: 1.25rem;
+    }
+    .footer-social-link {
+        margin-right: 15px;
+    }
+    .footer-bottom {
+        padding-bottom: .625rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .footer-menu-column-2 {
+        columns: 1 auto;
+    }
+    .footer-menu-list {
+        margin-bottom: 1.875rem;
+    }
+    .footer-menu-wrapper:last-child {
+        margin-top: 0;
+        margin-left: -1rem;
+    }
+    .footer-wrapper, .footer-legal {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        margin-bottom: 10px;
+    }
+
 }
 @media (max-width: 768px){
     .container{
@@ -1196,6 +1247,51 @@ body{
         width: 100%;
         margin-bottom: 50px;
     }
+    .input-group-wrapper {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .input {
+        width: 100%;
+    }
+    .cta-form-text {
+        font-size: 14px;
+    }
+    .notify-text {
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+    .cta-form-button {
+        font-size: 14px;
+        height: 4.975rem;
+    }
+    .cta-form-text {
+        font-size: 14px;
+        margin-bottom: 37px;
+    }
+    .cta-from-title {
+        margin-top: -30px;
+    }
+    .section-cta {
+        padding-bottom: 3.25rem;
+    }
+    .footer-phone {
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+        margin-top: 12px;
+    }
+    .footer-info-address, .footer-info-email {
+        margin-left: 10px;
+    }
+    .foter-info {
+        font-size: 14px;
+    }
+    .footer-social {
+        margin-top: 0.25rem;
+    }
+    .footer-copyright, .footer-policy, .made-in {
+        font-size: 1rem;
+      }
 }
 @media (max-width: 576px){
     .container{
@@ -1300,5 +1396,21 @@ body{
     .clients-logo {
         width: 50px;
         height: 50px;
+    }
+    .cta-form-footer {
+        flex-direction: column;
+    }
+    .cta-form-button {
+        width: 90%;
+    }
+    .cta-form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    .input {
+        width: 90%;
+    }
+    .footer {
+        padding-top: 15px;
     }
 }
