@@ -60,13 +60,18 @@ const swiper = new Swiper('.features-slider', {
         
 const lightModeOn = (event) => {
     navbar.classList.add("navbar-light");
-    logo.href.baseVal = "img/sprite.svg#logo";
+    // logo.href.baseVal = "img/sprite.svg#logo";
 };
 
 const lightModeOff = (event) => {
     navbar.classList.remove("navbar-light");
-    logo.href.baseVal = "img/sprite.svg#logo-light";
+    // logo.href.baseVal = "img/sprite.svg#logo-light";
 };
+
+const isFront = document.body.classList.contains("front-page");
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
+}
 
 const openMenu = (event) => {  // функция открытия меню
     menu.classList.add("is-open"); // добавление класса is-open
@@ -82,9 +87,9 @@ const closeMenu = (event) => {  // функция закрытия меню
     lightModeOff();
 };
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", ()=> {
 
-    this.scrollY > 1 ? lightModeOn() : lightModeOff(); 
+    // this.scrollY > 1 ? lightModeOn() : lightModeOff(); 
     /*Если окно прокуручно больше чем на 1px, если да (знак ?) 
     то выполнить условие "включить светлый режим" lightModeOn()
     иначе (:) выполнить следующее условие lightModeOff()*/ 
@@ -94,6 +99,11 @@ window.addEventListener("scroll", ()=>{
     // } else {
     //     lightModeOff();
     // }
+    this.scrollY > 1 ? changeNavHeight('4.5rem') : changeNavHeight('5.875rem');
+    if (isFront) {
+      this.scrollY > 1 ? lightModeOn() : lightModeOff();
+    }
+    
 });
 
 mMenuToggle.addEventListener("click", (event) => {
