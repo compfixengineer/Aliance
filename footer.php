@@ -9,6 +9,8 @@
                        <div class="input-group">
                             <input id="user-name" type="text" class="input" 
                             name = "username"
+                            required
+                            maxlength="30"
                             placeholder=" ">
                             <label class="input-group-label" for="user-name">Имя</label>   
                        </div>
@@ -16,6 +18,8 @@
                        <div class="input-group">
                             <input id="user-phone" type="tel" class="input" 
                             name = "userphone"
+                            required
+                            maxlength="30"
                             placeholder=" ">
                             <label class="input-group-label" for="user-phone">Номер телефона</label>
                        </div>
@@ -173,16 +177,22 @@
             <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
             </p>
             <!-- /.modal-text -->
-            <form action="#" class="modal-form">
+            <form action="handler.php" method ="POST" class="modal-form">
                 <div class="input-group-wrapper input-group-vertical">
                     <div class="input-group modal-input-group">
                          <input id="modal-user-name" type="text" class="input modal-input"
+                         name = "username"
+                         required
+                         maxlength="30"
                          placeholder=" ">
                          <label class="input-group-label modal-input-lable" for="modal-user-name">Имя</label>   
                     </div>
                     <!-- /.input-group -->
                     <div class="input-group modal-input-group">
                          <input id="modal-user-phone" type="tel" class="input modal-input"
+                         name = "userphone"
+                         required
+                         maxlength="30"
                          placeholder=" ">
                          <label class="input-group-label modal-input-lable" for="modal-user-phone">Номер телефона</label>
                     </div>
