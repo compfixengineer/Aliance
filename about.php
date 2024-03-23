@@ -115,7 +115,7 @@
                     <a href="/about.php" class="header-nav-link">О компании</a>
                 </li>
                 <li class="header-nav-item">
-                    <a href="/contract-trades.html" class="header-nav-link">Контрактное производство</a>
+                    <a href="/contract-trades.php" class="header-nav-link">Контрактное производство</a>
                 </li>
                 <li class="header-nav-item">
                     <a href="#" class="header-nav-link">Собственные торговые марки</a>
