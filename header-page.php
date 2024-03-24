@@ -18,13 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <title>Автомобильная химия - Aliance Production</title>
+    <title><?php echo $page_title?> - Aliance Production</title>
 </head>
 <body>
     <div class="mobile-menu">
         <ul class="mobile-menu-nav">
             <li class="mobile-menu-nav-item">
-                <a href="/about.html" class="mobile-menu-link">О компании</a>
+                <a href="./about.php" class="mobile-menu-link">О компании</a>
             </li>
             <li class="mobile-menu-nav-item">
                 <a href="./contract-trades.php" class="mobile-menu-link">Контрактное производство</a>
@@ -50,7 +50,7 @@
                 </ul>
             </li>
             <li class="mobile-menu-nav-item">
-                <a href="#" class="mobile-menu-link">Собственные марки</a>
+                <a href="./trademarks.php" class="mobile-menu-link">Собственные марки</a>
                 <ul class="mobile-submenu">
                     <li class="mobile-submenu-item">
                         <a href="#" class="mobile-submenu-link">Автохимия AG-Tech</a>
@@ -144,25 +144,22 @@
             </button>
     </nav>
     <!-- /.navbar --> 
-    
-    <header class="header header-page header-page-bg-grey header-page-image">
+    <!-- header-page-bg-grey -->
+    <header class="header header-page <?= $header_stile?>">
         <div class="container">
             <div class="header-content-page">
                 <div class="seporator"></div>
                 <!-- /.seporator -->
                 <h1 class="header-title">
-                    Автомобильная химия
+                <?= $page_title?>
                 </h1>
                 <!-- /.header-title -->
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs-item">
                       <a href="./index.php" class="breadcrumbs-link">Главная</a>
                     </li>
-                    <li class="breadcrumbs-item">
-                        <a href="./contract-trades.php" class="breadcrumbs-link">Котрактное производство</a>
-                    </li>
                     <li class="breadcrumbs-item active">
-                      <a href="#" class="breadcrumbs-link">Автомобильная химия</a>
+                      <a href="#" class="breadcrumbs-link"><?= $page_title?></a>
                     </li>
                   </ul>
             </div>
@@ -170,5 +167,3 @@
         </div>
         <!-- container -->
     </header>
-
-    <?php include_once('footer.php');?>

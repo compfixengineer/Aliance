@@ -161,7 +161,7 @@ const setReplacer = (target, expression) => {
   });
 };
 
-setReplacer(document.querySelector('#user-name'), /\d/g);
+setReplacer(document.querySelector('#user-name'), /\d/g); /*Где #user-name - идентификатор input (<input id="user-name">)*/
 setReplacer(document.querySelector('#modal-user-name'), /\d/g);
 
 let currentModal; // Текущее модальное окно
