@@ -136,7 +136,7 @@
                 </a>
             </div>
             <!-- /.header-phone -->
-            <button class="header-button button" data-toggle="modal">
+            <button class="header-button button" data-toggle="modal" data-target="#feedback-modal">
                 <svg class="button-icon" width="24" height="24"  >
                     <use href="img/sprite.svg#phone"></use>
                 </svg> 
@@ -159,7 +159,8 @@
                     высококачественный прототип будущего проекта напрямую зависит от анализа существующих паттернов поведения.
                 </p>
                 <!-- /.header-title -->
-                <button class="button header-button-title" data-toggle="modal">Подробнее о компании</button>
+                <button class="button header-button-title" data-toggle="modal" data-target="#feedback-modal">Подробнее о компании</button>
+                            <!-- ссылаемся на #feedback-modal  -->
             </div>
             <!-- /.header-content -->
 

@@ -827,7 +827,7 @@ body{
 }
 .input-group-wrapper {
     display: flex;
-    gap: 12.875rem;
+    gap: 1.875rem;
 }
 .input-group-vertical {
     display: flex;
@@ -841,7 +841,7 @@ body{
     background-color: #f0f2f5;
 }
 .input {
-    width: 176%;
+    width: 100%;
     height: 100%;
     position:absolute;
     top: 0;
@@ -880,6 +880,22 @@ body{
     background-color: inherit;
     padding: 0 10px
 }
+.input.is-invalid {
+    border: 1px solid red;
+}
+.just-validate-error-label {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background-color: inherit;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  display: inline-block;
+  color: red;
+}
+
 .cta-form-footer {
     display: flex;
     align-items: center;
@@ -1083,7 +1099,7 @@ body{
 .modal-form-footer {
     margin-top: 30px;
 }
-.modsl-form-button {
+.modal-form-button {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;

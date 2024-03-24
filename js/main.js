@@ -150,49 +150,100 @@ breakpoints: {
 }
 });
 
-// const modal = document.querySelector(".modal");
-// const modalToggle = document.querySelectorAll("[data-toggle=modal]");
-// const modalClose = document.querySelector(".modal-close");
-// modalToggle.forEach((element) => {
-//   element.addEventListener ("click",(event) => {
-//     event.preventDefault();
-//     modal.classList.add("is-open");
-//   });
-// });
+/*Запрет ввода цифр в поле Имя в инпуте*/
+const setReplacer = (target, expression) => {
+  target.addEventListener('input', () => {
+    const parsedValue = target.value.replace(expression, '');
+    
+    if (parsedValue !== target.value) {
+      target.value = parsedValue;
+    }
+  });
+};
 
-// modalClose.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   modal.classList.remove("is-open");
-// });
+setReplacer(document.querySelector('#user-name'), /\d/g);
+setReplacer(document.querySelector('#modal-user-name'), /\d/g);
 
-// modal.addEventListener("click", (element) => {
-//   if (element.target === modal) {
-//     modal.classList.remove("is-open");
-//   }
-// });
+let currentModal; // Текущее модальное окно
+let modalDialog;
+let alertModal = document.querySelector("#alert-modal"); // Окно с благодарностью; Обращение к идентификатору id = alert-modal
+const closeAlertButton = document.getElementById("close-alert-modal");
+const modalButtons = document.querySelectorAll("[data-toggle=modal]"); // Все кнопки которые имеют атрибут data-toggle=modal
 
-// window.addEventListener("keydown", (element) => {
-//   if (element.code === "Escape" && modal.classList.contains("is-open")) {
-//     modal.classList.remove("is-open");
-//   }
-// });
-
-const modal = document.querySelector(".modal");
-const modalDialog = document.querySelector(".modal-dialog");
-
-document.addEventListener ("click", (event) => {
-  if (event.target.dataset.toggle == "modal" ||
-      event.target.parentNode.dataset.toggle == "modal" ||
-      (!event.composedPath().includes(modalDialog) && 
-        modal.classList.contains("is-open"))
-  ) {
+modalButtons.forEach((button)  => {
+  /*Событие клик по кнопке*/
+  button.addEventListener("click", (event) => {
+    /*Определение текущего открытого окна*/
     event.preventDefault();
-    modal.classList.toggle("is-open");
-  }
+    currentModal = document.querySelector(button.dataset.target);
+    currentModal.classList.toggle("is-open");
+    modalDialog = currentModal.querySelector(".modal-dialog");
+    currentModal.addEventListener("click", (event) => {
+      if (!event.composedPath().includes(modalDialog)) {
+        currentModal.classList.remove("is-open");
+      }
+    });
+  });
 });
+
+document.getElementById("close-alert-modal").onclick = function () {
+  currentModal.classList.remove("is-open");
+}
 
 document.addEventListener("keyup", (event) => {
-  if (event.key == "Escape" && modal.classList.contains("is-open")) {
-    modal.classList.toggle("is-open");
+  if (event.key == "Escape" && currentModal.classList.contains("is-open")) {
+    currentModal.classList.toggle("is-open");
   }
 });
+
+const forms = document.querySelectorAll("form"); // собираем все формы
+
+forms.forEach((form) => {
+  const validation = new JustValidate (form, {
+    errorFieldCssClass: 'is-invalid',
+  });
+  validation
+  .addField("[name=username]", [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите Ваше имя',
+    },
+    {
+      rule: 'maxLength',
+      value: 50,
+      errorMessage: 'Максимальное количество символов 50',
+    },
+  ])
+  .addField("[name=userphone]", [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите номер телефона',
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target; // Наша форма
+    const formData = new FormData(thisForm); // Получаеи данные из формы
+    const ajaxSend = (formData) => {
+      fetch(thisForm.getAttribute("action"), {
+        method: thisForm.getAttribute("method"),
+        body: formData, 
+      }).then((responce) => {
+        if (responce.ok) {
+          thisForm.reset(); 
+          currentModal.classList.remove("is-open");
+          alertModal.classList.add("is-open");
+          currentModal = alertModal;
+          modalDialog = currentModal.querySelector(".modal-dialog");
+          currentModal.addEventListener("click", (event) => {
+            if (!event.composedPath().includes(modalDialog)) {
+              currentModal.classList.remove("is-open");
+            }
+          });
+        } else {
+          alert(responce.statusText);
+        }
+      });
+    };
+    ajaxSend(formData);
+  });
+})
