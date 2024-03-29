@@ -1,3 +1,6 @@
+@import url("normalize.css");
+@import url("swiper-bundle.min.css");
+
 *{
     box-sizing: border-box;
 }
@@ -11,16 +14,6 @@ body{
 }
 
 @font-face {
-	font-family: 'Bebas';
-	src: url('../fonts/bebas_neue_cyrillic.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/bebas_neue_cyrillic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/bebas_neue_cyrillic.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/bebas_neue_cyrillic.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/bebas_neue_cyrillic.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/bebas_neue_cyrillic.svg#bebas_neue_cyrillic') format('svg'); /* Chrome < 4, Legacy iOS */
-}
-
-@font-face {
 	font-family: 'Noto Sans';
 	src: url('../fonts/noto_sans.eot'); /* IE 9 Compatibility Mode */
 	src: url('../fonts/noto_sans.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
@@ -28,6 +21,7 @@ body{
 		url('../fonts/noto_sans.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
 		url('../fonts/noto_sans.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/noto_sans.svg#noto_sans') format('svg'); /* Chrome < 4, Legacy iOS */
+        /* font-display: swap; */
 }
 
 @font-face {
@@ -38,6 +32,7 @@ body{
 		url('../fonts/bebas_neue_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
 		url('../fonts/bebas_neue_regular.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/bebas_neue_regular.svg#bebas_neue_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+        /* font-display: swap; */
 }
 
 .container{
@@ -52,8 +47,16 @@ body{
     /* min-height: 100vh; */
 }
 
-.header-image{
+.no-webp .header-image {
     background-image: url("../img/header-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.header-image{
+    background-image: url("../img/header-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -987,7 +990,7 @@ body{
 }
 .footer-menu-column-2 {
     columns: 20rem auto;
-    min-width: 46.5rem;
+    /* min-width: 46.5rem; */
 }
 .footer-menu-link {
     text-decoration: none;

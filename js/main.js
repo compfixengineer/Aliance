@@ -168,18 +168,35 @@ let currentModal; // Текущее модальное окно
 let modalDialog;
 let alertModal = document.querySelector("#alert-modal"); // Окно с благодарностью; Обращение к идентификатору id = alert-modal
 const closeAlertButton = document.getElementById("close-alert-modal");
-const modalButtons = document.querySelectorAll("[data-toggle=modal]"); // Все кнопки которые имеют атрибут data-toggle=modal
+const modalButtons = document.querySelectorAll('[data-toggle="modal"]'); // Все кнопки которые имеют атрибут data-toggle=modal
+
+
+const cta = document.querySelector(".section-cta");
+const ctaButton = document.querySelector(".cta-form-button");
+const ctaForm = document.querySelector(".cta-form");
+
+// ctaButton.addEventListener("click", (event) => {
+//   console.log("Нажали кнопку в cta");
+// });
+
+console.log(cta);
+console.log(ctaButton);
+console.log(ctaForm);
+
 
 modalButtons.forEach((button)  => {
   /*Событие клик по кнопке*/
-  button.addEventListener("click", (event) => {
-    /*Определение текущего открытого окна*/
-    event.preventDefault();
-    currentModal = document.querySelector(button.dataset.target);
-    currentModal.classList.toggle("is-open");
-    modalDialog = currentModal.querySelector(".modal-dialog");
-    currentModal.addEventListener("click", (event) => {
-      if (!event.composedPath().includes(modalDialog)) {
+  button.addEventListener("click", (event) => 
+  {
+        /*Определение текущего открытого окна*/
+        event.preventDefault();
+        currentModal = document.querySelector(button.dataset.target);
+        currentModal.classList.toggle("is-open");
+        modalDialog = currentModal.querySelector(".modal-dialog");
+        currentModal.addEventListener("click", (event) => 
+        {
+      if (!event.composedPath().includes(modalDialog)) 
+      {
         currentModal.classList.remove("is-open");
       }
     });
@@ -196,7 +213,7 @@ document.addEventListener("keyup", (event) => {
   }
 });
 
-const forms = document.querySelectorAll("form"); // собираем все формы
+const forms = document.querySelectorAll(".modal-form"); // собираем все формы
 
 forms.forEach((form) => {
   const validation = new JustValidate (form, {

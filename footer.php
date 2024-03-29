@@ -1,6 +1,10 @@
 <section class="calltoaction">
         <div class="bg-grey section-cta">
-            <img src="img/cta.png" alt="call to action" class="cta-image">
+            <picture>
+                <source type="image/webp" srcset="img/cta.webp">
+                <source type="image/png" srcset="img/cta.png">
+                <img src="img/cta.png" alt="call to action" class="cta-image">
+            </picture>
             <div class="cta-form-wrapper container">
                 <form action="handler.php" method ="POST" class="cta-form">
                     <h2 class="section-title cta-from-title">Хотите сотрудничать?</h2>
@@ -64,13 +68,13 @@
                     </a>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="footer-social-link">
+                    <a href="#" class="footer-social-link" aria-label="vk">
                         <svg class="vkontakte-icon" width="24" height="24"  >
                             <use href="img/sprite.svg#vkontakte"></use>
                         </svg>
                     </a>
             
-                    <a href="#" class="footer-social-link">
+                    <a href="#" class="footer-social-link" aria-label="inst">
                         <svg class="instagram-icon" width="24" height="24"  >
                             <use href="img/sprite.svg#instagram"></use>
                         </svg>
