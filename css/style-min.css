@@ -1,8 +1,8 @@
 @import url("normalize.css");@import url("swiper-bundle.min.css");*{box-sizing:border-box}
 html{font-size:16px}
 body{font-family:"Noto Sans",sans-serif}
-@font-face{font-family:'Noto Sans';src:url('../fonts/noto_sans.eot');src:url('../fonts/noto_sans.eot?#iefix') format('embedded-opentype'),url('../fonts/noto_sans.woff2') format('woff2'),url('../fonts/noto_sans.woff') format('woff'),url('../fonts/noto_sans.ttf') format('truetype'),url('../fonts/noto_sans.svg#noto_sans') format('svg')}
-@font-face{font-family:'Bebas Regular';src:url('../fonts/bebas_neue_regular.eot');src:url('../fonts/bebas_neue_regular.eot?#iefix') format('embedded-opentype'),url('../fonts/bebas_neue_regular.woff2') format('woff2'),url('../fonts/bebas_neue_regular.woff') format('woff'),url('../fonts/bebas_neue_regular.ttf') format('truetype'),url('../fonts/bebas_neue_regular.svg#bebas_neue_regular') format('svg')}
+@font-face{font-family:'Noto Sans';src:url('../fonts/noto_sans.eot');src:url('../fonts/noto_sans.eot?#iefix') format('embedded-opentype'),url('../fonts/noto_sans.woff2') format('woff2'),url('../fonts/noto_sans.woff') format('woff'),url('../fonts/noto_sans.ttf') format('truetype'),url('../fonts/noto_sans.svg#noto_sans') format('svg');font-display: swap;}
+@font-face{font-family:'Bebas Regular';src:url('../fonts/bebas_neue_regular.eot');src:url('../fonts/bebas_neue_regular.eot?#iefix') format('embedded-opentype'),url('../fonts/bebas_neue_regular.woff2') format('woff2'),url('../fonts/bebas_neue_regular.woff') format('woff'),url('../fonts/bebas_neue_regular.ttf') format('truetype'),url('../fonts/bebas_neue_regular.svg#bebas_neue_regular') format('svg');font-display: swap;}
 .container{max-width:90rem;margin:auto}
 .header{padding-top:5.875rem}
 .no-webp .header-image{background-image:url("../img/header-bg.jpg");background-size:cover;background-repeat:no-repeat;background-position:center;position:relative}

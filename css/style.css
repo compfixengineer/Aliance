@@ -21,7 +21,7 @@ body{
 		url('../fonts/noto_sans.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
 		url('../fonts/noto_sans.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/noto_sans.svg#noto_sans') format('svg'); /* Chrome < 4, Legacy iOS */
-        /* font-display: swap; */
+        font-display: swap;
 }
 
 @font-face {
@@ -32,7 +32,7 @@ body{
 		url('../fonts/bebas_neue_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
 		url('../fonts/bebas_neue_regular.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/bebas_neue_regular.svg#bebas_neue_regular') format('svg'); /* Chrome < 4, Legacy iOS */
-        /* font-display: swap; */
+        font-display: swap;
 }
 
 .container{
