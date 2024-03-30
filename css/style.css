@@ -589,7 +589,9 @@ body{
     margin-top: -15px;
 }
 .card-image {
-    width: 90%;
+    /* width: 90%; */
+    width: 425px;
+    height: 265px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -659,8 +661,10 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    width: 44%;
-    height: 100%;
+    width: 52.5rem;
+    height: 41.25rem;
+    /* width: 44%;
+    height: 100%; */
     object-fit: cover;
 }
 .founder-content {
@@ -729,17 +733,17 @@ body{
 }
 .clients-logo {
     max-width: 100%;
-    width: 70px;
-    height: 70px;
+    width: 4.375rem;
+    height: 4.375rem;
 }
 
 /******************* Blog slider **************************/
 .blog {
-    padding-top: 50px;
+    padding-top: 3.125rem;
 }
 .blog-slider {
-    padding-top: 33px;
-    padding-left: 10px;
+    padding-top: 2.0625rem;
+    padding-left: .625rem;
 }
 .blog-card {
     display: flex;
@@ -1125,6 +1129,10 @@ body{
     .header-page-image {
         background-image: none;
     }
+    .founder-photo {
+        width: 44%;
+        height: 100%;
+    }
 }
 @media (max-width: 1460px) {
     html{
@@ -1198,7 +1206,19 @@ body{
     .blog-button-next {
     padding: 10px 15px;
     }
-} 
+    .founder-photo {
+        width: 44%;
+        height: 100%;
+    }
+    .card {
+        flex-basis: 50%;
+        height: 490px;
+    }
+    }
+    .card-image {
+        width: 90%;
+    }
+ 
 @media (max-width: 992px) {
     html{
         font-size: 12px;
@@ -1350,6 +1370,7 @@ body{
     }
     .card {
         flex-basis: 50%;
+        height: 450px;
     }
     .trademark-cards {
         flex-direction: column;
@@ -1405,6 +1426,9 @@ body{
         align-items: start;
         gap: 0;
         margin-bottom: 10px;
+    }
+    .conteiner-founder {
+        max-width: none;
     }
 
 }
@@ -1568,10 +1592,17 @@ body{
         padding-bottom: 0px;
         margin-bottom: -2px;
     }
+    .clients-logo-item:last-child {
+        display: none;
+    }
     .clients-logo-item {
       flex-basis: 50%; 
       height: 110px;
       padding-bottom: 30px; 
+    }
+    .founder-content-wrapper {
+        width: 90%;
+        padding-left: 20px;
     }
     .founder-text {
         font-size: 15px;
