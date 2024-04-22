@@ -47,12 +47,12 @@
                  <!-- If we need navigation buttons -->
                 <div class="blog-buttons primary-buttons-wrapper">
                     <div class="blog-button-prev primary-button-prev">
-                        <svg width="36" height="24"  >
+                        <svg width="36" height="24" fill="white">
                             <use href="img/sprite.svg#arrow-prev"></use>
                         </svg>
                     </div>
                     <div class="blog-button-next primary-button-next">
-                        <svg width="36" height="24"  >
+                        <svg width="36" height="24" fill="white">
                             <use href="img/sprite.svg#arrow-next"></use>
                         </svg>
                     </div>

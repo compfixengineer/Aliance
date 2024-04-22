@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="css/style-min.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/style-min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
     <script>/*! modernizr 3.6.0 (Custom Build) | MIT *
             * https://modernizr.com/download/?-webp-setclasses !*/
@@ -215,12 +215,12 @@
                 <!-- Кнопки навигации -->
                 <div class="slider-buttons">
                     <div class="slider-button-prev">
-                        <svg width="36" height="24"  >
+                        <svg width="36" height="24"  fill="white">
                             <use href="img/sprite.svg#arrow-prev"></use>
                         </svg>
                     </div>
                     <div class="slider-button-next">
-                        <svg width="36" height="24"  >
+                        <svg width="36" height="24" fill="white" >
                             <use href="img/sprite.svg#arrow-next"></use>
                         </svg>
                     </div>
@@ -298,4 +298,5 @@
 
     <?php $block_title = "Блог экспертов в области производства"; include_once('./template-parts/section-blog.php');?>
     
-    <?php include_once('footer.php');?>
+    <?php   include_once('./template-parts/cta.php');
+            include_once('footer.php');?>
