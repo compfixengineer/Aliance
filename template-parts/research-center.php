@@ -5,25 +5,32 @@
     </div>
     <!-- /.container -->
     <!-- Slider main container -->
-    <div class="swiper blog-slider">
+    <div class="swiper blog-slider research-center-slider">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
         <!-- Slides -->
-            <a href="#" class="swiper-slide blog-card">
+            <a href="#" class="swiper-slide blog-card research-center-card">
             <picture>
                 <source type="image/webp" srcset="img/blog/1.webp">
                 <source type="image/jpeg" srcset="img/blog/1.jpg">
                 <img src="img/blog/1.jpg" alt="" class="blog-card-image">
             </picture>
             </a>
-            <a href="#" class="swiper-slide blog-card">
+            <a href="#" class="swiper-slide blog-card research-center-card">
             <picture>
                 <source type="image/webp" srcset="img/blog/2.webp">
                 <source type="image/jpeg" srcset="img/blog/2.jpg">
                 <img src="img/blog/2.jpg" alt="" class="blog-card-image">
             </picture>
             </a>
-            <a href="#" class="swiper-slide blog-card">
+            <a href="#" class="swiper-slide blog-card research-center-card">
+            <picture>
+                <source type="image/webp" srcset="img/blog/1.webp">
+                <source type="image/jpeg" srcset="img/blog/1.jpg">
+                <img src="img/blog/1.jpg" alt="" class="blog-card-image">
+            </picture>
+            </a>
+            <a href="#" class="swiper-slide blog-card research-center-card">
             <picture>
                 <source type="image/webp" srcset="img/blog/1.webp">
                 <source type="image/jpeg" srcset="img/blog/1.jpg">

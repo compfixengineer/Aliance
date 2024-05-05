@@ -802,6 +802,32 @@ body{
     margin-top: 30px;
 }
 
+.blog-research-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-right: 130px;
+}
+
+.research-center-slider {
+    
+}
+
+.research-center-card {
+    width: 43.75rem;
+}
+
+.research-center-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:rgb(41, 45, 51, 0.0);
+    z-index: -1;
+}
 /*************** Call of Action *********************/
 
 .bg-grey {
